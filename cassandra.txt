@@ -1,0 +1,3 @@
+CREATE KEYSPACE temperature_logger WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+CREATE TABLE temperature_log ( logger_id text, datetime timestamp, temperature float, humidity float, PRIMARY KEY (logger_id, datetime));
