@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "etiennedi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^5.4.0"
+  }
 }
