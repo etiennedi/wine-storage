@@ -2,13 +2,13 @@
 const Rx = require('rxjs/Rx');
 
 const numberOfEntries = process.argv[2] || 100;
-const averageSecondsBetweenSteps = process.argv[3] || 3600;
+const averageSecondsBetweenSteps = (process.argv[3] || 3600) * 1000;
 
 console.log(`Creating ${numberOfEntries} entries with on average ${averageSecondsBetweenSteps} seconds between entries`);
 
 const loggerId = 'fridge_0_zone_0';
-const maximumTemperatureDifferencePerEntry = 0.1;
-const maximumHumidityDifferencePerEntry = 0.5;
+const maximumTemperatureDifferencePerEntry = 0.3;
+const maximumHumidityDifferencePerEntry = 1;
 
 const randomMinusOneToOne = () => 1 - (Math.random() * 2);
 
