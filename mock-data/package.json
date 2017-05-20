@@ -1,0 +1,11 @@
+{
+  "name": "generate-temperature-logs",
+  "version": "0.0.1",
+  "description": "Generate some fake temperature data with RxJS v5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "etiennedi",
+  "license": "MIT"
+}
