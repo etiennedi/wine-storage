@@ -2,11 +2,13 @@ const Koa = require('koa');
 const route = require('koa-route');
 const logger = require('koa-logger');
 const cassandra = require('cassandra-driver');
+const cors = require('koa-cors');
 
 const app = new Koa();
 const cassandraClient = new cassandra.Client({ contactPoints: ['winestorage_db_1'] });
 
 app.use(logger());
+app.use(cors());
 
 async function getLogEntries(ctx, id) {
   try {
