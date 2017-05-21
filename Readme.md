@@ -9,7 +9,7 @@ $ ./initialize
 ```
 
 This initalization script will:
-1. spin up the following servies using docker-compose
+1. spin up the following servies using `docker-compose`
   - a cassandra db
   - a simple API with a get route to get data from the C\*
   - a React App using chart.js to visualize the data
