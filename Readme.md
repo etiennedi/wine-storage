@@ -29,7 +29,7 @@ You must be able to run `docker-compose` commands and `sh` scripts. Everything e
 ### What about hot-reloading?
 The react app uses the setup from `create-react-app` and thus has pretty advanced hot-reloading and error reporting for a great DX. This is not lost due to the dockerization. The `src` folder inside the `./frontend` app is linked using a docker volume. Therefore, hot-reloading still works. 
 
-The only downside is that you have to rebuild the `frontend` service if you add another npm module, but I'm sure that could be automated as well. You could definitely link the node\_modules as a container, as well...
+The only downside is that you have to rebuild the `frontend` service if you add another npm module, but I'm sure that could be automated as well. You could definitely link the node\_modules as a volume to the container, as well...
 
 ### Why are you running a dev build and not a prod build inside the docker-compose
 The docker-compse config is meant as a easy-to-use dev environment. It is not meant as a pre-prod or even production environment.
