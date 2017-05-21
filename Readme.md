@@ -1,4 +1,4 @@
-#A wine storage temperature and humidity logger
+# A wine storage temperature and humidity logger
 
 You can automatically setup the dev environment, which will spin up a cassandra db and insert randomly generated temperature data.
 
