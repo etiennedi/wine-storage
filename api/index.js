@@ -4,15 +4,20 @@ const logger = require('koa-logger');
 const cassandra = require('cassandra-driver');
 
 const app = new Koa();
-const cassandraClient = new cassandra.Client({ contactPoints: ['127.0.0.1'] });
+const cassandraClient = new cassandra.Client({ contactPoints: ['winestorage_db_1'] });
 
 app.use(logger());
 
 async function getLogEntries(ctx, id) {
-  await cassandraClient.connect();
-  const query = 'SELECT * FROM temperature_logger.temperature_log WHERE logger_id = ?';
-  const result = await cassandraClient.execute(query, [id], { prepare: true });
-  ctx.body = result.rows;
+  try {
+    await cassandraClient.connect();
+    const query = 'SELECT * FROM temperature_logger.temperature_log WHERE logger_id = ?';
+    const result = await cassandraClient.execute(query, [id], { prepare: true });
+    ctx.body = result.rows;
+  } catch (error) {
+    ctx.statusCode = 500;
+    ctx.body = error;
+  }
 }
 
 app.use(route.get('/log-data/:logger_id', getLogEntries));
