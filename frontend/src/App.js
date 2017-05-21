@@ -75,7 +75,7 @@ class App extends Component {
     }
 
     return (
-      <div>
+      <div className="App">
         <Line data={data} options={options}/>
       </div>
     );
