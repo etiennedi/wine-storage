@@ -4,10 +4,18 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.1",
+    "chart.js": "^2.5.0",
+    "eslint": "^3.19.0",
     "react": "^15.5.4",
+    "react-chartjs-2": "^2.1.0",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
     "react-scripts": "1.0.2"
   },
   "scripts": {
