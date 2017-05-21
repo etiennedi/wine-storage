@@ -16,6 +16,10 @@ This initalization script will:
 2. run a script to setup the keyspace and table in the C\*
 3. run a script to generate random temp & humidity data and insert it in the C\*
 
+**You can now navigate to the url displayed in the console and should see something similar to this:**
+
+!["chart"](chart-example.png)
+
 ## Starting the setup a second time
 Simply run `docker-compose build && docker-compose up`. You do not have to re-setup the db each time. Only if you ever do a `docker-compsoe down`. Then you will have to run `$ ./initialize` again.
 
